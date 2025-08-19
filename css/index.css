@@ -59,7 +59,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1289px;
+    width: 1170px;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-self: center;
@@ -106,8 +106,8 @@ nav ul li:nth-child(4)::after {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-    /* gap: 258px; */
-    width: 1289px;
+    gap: 120px;
+    width: 1170px;
     justify-self: center;
 }
 
