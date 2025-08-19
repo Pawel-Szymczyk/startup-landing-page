@@ -23,8 +23,8 @@ h1 {
 h2 {
   font-size: 40px;
   line-height: 60px;
-  letter-spacing: -1.5px;
-  font-weight: normal;
+  letter-spacing: -1px;
+  font-weight: 500;
   color: #0f2137;
   margin: 0;
   text-align: left;
@@ -65,7 +65,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 200px;
+  gap: 150px;
 }
 
 .header-container {
@@ -76,7 +76,6 @@ body {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-self: center;
-  margin-bottom: 100px;
 }
 
 nav ul {
@@ -116,16 +115,17 @@ nav ul li:nth-child(4)::after {
 
 .hero-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 120px;
   width: 1170px;
   justify-self: center;
+  margin-top: 130px;
 }
 
-.hero-message {
+.hero-header {
   display: grid;
-  gap: 30px;
+  gap: 33px;
   align-items: center;
   align-content: center;
   width: 507px;
@@ -184,6 +184,7 @@ nav ul li:nth-child(4)::after {
 .hero-message-ghost-icons {
   display: grid;
   grid-template-columns: repeat(3, 123px);
+  gap: 10px;
 }
 
 .pattern {
@@ -205,6 +206,7 @@ nav ul li:nth-child(4)::after {
   display: flex;
   flex-direction: column;
   gap: 100px;
+  margin-top: 50px;
 }
 
 .features-header p {
@@ -217,7 +219,7 @@ nav ul li:nth-child(4)::after {
 .features-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 24px;
+  gap: 24px 60px;
   grid-template-rows: repeat(3, auto);
 }
 
@@ -246,4 +248,148 @@ nav ul li:nth-child(4)::after {
   letter-spacing: 0px;
   font-weight: normal;
   color: #343d48;
+}
+
+.stats {
+  display: inherit;
+  background-color: #f9fafc;
+  width: 100%;
+  height: 960px;
+  justify-content: center;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-columns: 1500px 600px; */
+  width: 100%;
+  gap: 100px;
+}
+
+.stats-header {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+  align-content: center;
+  width: 511px;
+  /* height: 508px; */
+}
+
+.stats-header p {
+  font-size: 17px;
+}
+
+.stats-header ul {
+  list-style: none;
+  margin: 0;
+}
+.stats-header ul li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #02073e;
+}
+
+.stats-header ul li::before {
+  content: "";
+  background-image: url("../images/tick.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 20px;
+  height: 20px;
+}
+
+.stats-btn {
+  color: #4f96ff;
+  display: flex;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 42px;
+  letter-spacing: 0px;
+  gap: 8px;
+  /* position: relative; */
+}
+
+/* .stats-btn::after {
+  content: "";
+  background-image: url("../images/arrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 124px;
+  top: 16px;
+  width: 10px;
+  height: 10px;
+} */
+
+.stats-numbers {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 320px 320px;
+  gap: 40px;
+  justify-content: end;
+  align-content: center;
+  /* grid-column: span 2; */
+  align-items: start;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 320px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
+  gap: 30px;
+}
+
+.stat:nth-child(1),
+.stat:nth-child(3) {
+  align-self: start;
+  margin-top: 50px;
+}
+
+.stat:nth-child(1) {
+  color: #28d1dc;
+}
+
+.stat:nth-child(2) {
+  color: #ff753a;
+}
+
+.stat:nth-child(3) {
+  color: #fa578e;
+}
+
+.stat:nth-child(4) {
+  color: #28dcb2;
+}
+
+.stats-numbers span {
+  font-size: 72px;
+  line-height: 55px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.stats-numbers p {
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  color: #0f2137;
+  text-align: center;
+  width: 170px;
+  opacity: 0.7;
 }
